@@ -7,18 +7,21 @@ import { Genre } from "./hooks/useGenres";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  
+
   return (
     <Grid
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-      templateColumns={{ base: "1fr", lg: "200px 1fr" }}
+      templateColumns={{ base: "1fr", lg: "250px 1fr" }}
     >
       <GridItem area="nav">
         <NavBar />
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
-          <GenreList onSelectGenre={setSelectedGenre} />
+          <GenreList
+            onSelectGenre={setSelectedGenre}
+            selectedGenre={selectedGenre}
+          />
         </GridItem>
       </Show>
       <GridItem area="main">
