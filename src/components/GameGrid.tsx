@@ -19,7 +19,7 @@ const GameGrid = ({ gameQuery }: Props) => {
     isFetchingNextPage,
     hasNextPage,
   } = useGames(gameQuery);
-  const skeletons = Array.from({ length: gameQuery.pageSize }, (_, i) => i + 1);
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   if (error) return <Text>{error.message}</Text>;
 
