@@ -10,7 +10,7 @@ interface GameQuery {
 interface GameQueryStore {
   gameQuery: GameQuery;
   setGenreId: (genreId: number) => void;
-  setPlatformId: (platformId: number) => void;
+  setPlatformId: (platformId: number | undefined) => void;
   setSortOrder: (sortOrder: string) => void;
   setSearchText: (searchText: string) => void;
 }
