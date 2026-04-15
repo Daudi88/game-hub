@@ -8,7 +8,7 @@ import GenreList from "../components/GenreList";
 const HomePage = () => {
   return (
     <Grid
-      templateAreas={{ base: `"main"`, lg: `"nav nav" "aside main"` }}
+      templateAreas={{ base: `"main"`, lg: `"aside main"` }}
       templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
       <Show above="lg">
